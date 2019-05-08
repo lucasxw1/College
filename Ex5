@@ -1,0 +1,38 @@
+package javaapplication34;
+
+import java.util.Scanner;
+public class Ex5 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int a = ler.nextInt();
+        int b = ler.nextInt();
+       
+        
+        if (a < b) {
+            for (int j = a; j <= b; j++) {
+                if (j % 2 == 0) {
+                    System.out.println(j);
+                    
+                
+                }
+                
+            }
+            
+        } else {
+            for (int j = b; j <= a; j++) {
+                if (j % 2 == 0) {
+                    System.out.println(j);
+                
+            }
+        }
+        
+        
+        
+       
+     
+    }
+    
+ }
+    
+}
