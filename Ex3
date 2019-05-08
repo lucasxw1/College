@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+public class Ex2 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int num;
+        int i = 0;
+        
+        do{
+            System.out.println("Digite um numero");
+            num = ler.nextInt();
+           
+            for (int j = 1; j <= num; j++) {
+                if(j%2 != 0){
+                    System.out.println(j);
+                    
+                }
+                
+                
+            }
+            i++;
+         
+
+            
+        }while(i <6);
+     
+    }
+    
+}
