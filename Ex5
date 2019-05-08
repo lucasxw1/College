@@ -1,10 +1,11 @@
 package javaapplication34;
 
 import java.util.Scanner;
-public class Ex5 {
+public class Ex2 {
 
     public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
+        
         int a = ler.nextInt();
         int b = ler.nextInt();
        
@@ -13,26 +14,14 @@ public class Ex5 {
             for (int j = a; j <= b; j++) {
                 if (j % 2 == 0) {
                     System.out.println(j);
-                    
-                
-                }
-                
-            }
-            
+                }    
+            }       
         } else {
             for (int j = b; j <= a; j++) {
                 if (j % 2 == 0) {
                     System.out.println(j);
-                
-            }
-        }
-        
-        
-        
-       
-     
-    }
-    
- }
-    
-}
+                }   
+            }        
+        }     
+    }            
+}        
