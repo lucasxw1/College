@@ -1,0 +1,71 @@
+package javaapplication35;
+
+public class JavaApplication35 {
+
+    public static void main(String[] args) {
+        for (int i = 1000; i <= 1100; i++) {
+            if (numPrimo(i) == true) {
+                System.out.println(i);
+                
+            }
+            
+        }
+        
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    public static boolean numPrimo(int num){
+        if(divisores(num) == 2 ){
+            return true; 
+        } else {return false;}
+        
+    }
+    
+    
+    public static int divisores(int num){
+        int cont = 0;
+        for (int i = 1; i <= num; i++) {
+            if ( num%i == 0){
+                cont++;
+            }
+            
+        }
+        return cont;
+        
+    }
+    
+    
+    
+    
+    
+    
+    public static int somaDivP(int num){
+        int soma = 0;
+        for (int i = num/2; i > 0; i--) {
+            if (num % i == 0) {
+                soma = soma + i;
+           }
+         }
+        
+    return soma;}
+    
+    public static boolean numPerfeito(int num){
+        if (somaDivP(num) == num) {
+            return true;} else  { return false; }
+            
+            
+        }
+        
+        
+        
+    }
