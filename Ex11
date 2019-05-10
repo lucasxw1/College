@@ -1,0 +1,72 @@
+package ex11;
+import java.util.Scanner;
+public class Ex11 {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int h = 0;
+        int m = 0;
+        double maior = 0;
+        double menor = 1000000;
+        double mediaM = 0;
+        double mediaG = 0;
+        double contM = 0;
+        double contG = 0;
+        int sexo = 0;
+        double altura = 0;
+        
+        for (int i = 0; i < 50; i++) {
+            do{
+                System.out.println("Digite o sexo, 1 para homem e 2 para mulher");
+                sexo = ler.nextInt();
+                if (sexo == 1) {
+                    h++;}
+                else if(sexo ==2){
+                 m++;
+            }else{
+                    System.out.println("codigo invalido");
+                }
+        
+                       
+                  
+          }while(sexo <= 0 || sexo > 2);
+            
+            do{
+                System.out.println("Digite a altura");
+                altura = ler.nextInt();
+                if (sexo == 2) {
+                    contM = contM + altura;
+                    
+                    
+                }
+                contG = contG + altura;
+                
+                    
+                
+                    
+                
+                
+            }while(altura <= 0);
+            if (altura > maior) {
+                    maior = altura;
+                    
+                }
+                if(altura < menor){
+                    menor = altura;
+                }
+            
+            
+        
+        }
+        
+        mediaM = contM / m;
+        mediaG = contG / (m+h);
+        
+        System.out.println("Media da altura das mulher:" + mediaM);
+        System.out.println("Media da altura do grupo" + mediaG);
+        System.out.println("Maior altura" + maior);
+        System.out.println("Menor altura" + menor);
+        
+    
+    }
+}
