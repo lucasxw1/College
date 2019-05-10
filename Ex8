@@ -1,0 +1,45 @@
+package javaapplication35;
+
+public class JavaApplication35 {
+
+    public static void main(String[] args) {
+         int j = 0;
+        do{
+                       for (int i = 0; i < 1000000000; i++) { // lembrar de perguntar se existe algum modo mais pratico de fazer esse for sem colocar 10000000.
+                if ((numPerfeito(i) == true)) {
+                    System.out.println(i);
+                    
+                } 
+                
+                
+            }
+            j++;
+        }while(j > 5);
+        
+        
+        
+        
+        
+        
+    }
+    
+    public static int somaDivP(int num){
+        int soma = 0;
+        for (int i = num/2; i > 0; i--) {
+            if (num % i == 0) {
+                soma = soma + i;
+           }
+         }
+        
+    return soma;}
+    
+    public static boolean numPerfeito(int num){
+        if (somaDivP(num) == num) {
+            return true;} else  { return false; }
+            
+            
+        }
+        
+        
+        
+    }
