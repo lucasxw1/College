@@ -1,0 +1,61 @@
+package exeuclides;
+import java.util.Scanner;
+public class Exeuclides {
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int a;
+        int b;
+        int aux;
+        int aux2;
+        
+        do{
+            System.out.println("Digite o primeiro numero do MDC");
+             a = ler.nextInt();
+            System.out.println("Digite o segundo numero do MDC");
+             b = ler.nextInt();
+            if (a < 0 || b < 0) {
+                System.out.println("MDC invalido, digite um numero natural");
+                
+            }
+ 
+            
+        }while(a < 0 || b < 0);
+        
+        if ( a < b) {
+            aux = a;
+            a = b;
+            b = aux;}
+        
+        int resto = a%b;
+        if (resto == 0) {
+            System.out.println("O MDC de " + a + " e " + b + " é: " + b);
+            
+        } else {
+            do{
+                
+               
+                aux2 = b % resto;
+                
+                b = resto;
+                
+                resto = aux2;
+                
+                if (b == 1) {
+                    resto = 1;
+                    break;
+                }
+                
+                
+                
+            }while(resto != 0);
+            System.out.println(resto);
+        }
+                   
+            
+        
+        
+        
+    
+    }
+}
