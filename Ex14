@@ -1,0 +1,48 @@
+package ex11;
+import java.util.Scanner;
+public class Ex11 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int m = 0;
+       int n = 0;
+       int j = 0;
+       int soma = 0;
+       do{
+       
+           do{
+               System.out.println("Digite o numero inicial");
+           m = ler.nextInt();
+               System.out.println("Digite a quantidade de numeros consecutivos apartir do inicial");
+           n = ler.nextInt();
+           
+            }while(m < 0 || n < 0);    
+       
+       
+           for (int i = m; i <= (m+n); i++) {
+               System.out.println(i);
+               
+               if(i == (m+n)){
+                   System.out.println("=");
+               }else{
+                   System.out.println("+");
+               }
+               
+               
+               soma = soma + i;
+           }
+       
+           System.out.println(soma);
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       j++;
+       }while(j < 5);
+    }
+}
