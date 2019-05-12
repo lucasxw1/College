@@ -1,0 +1,65 @@
+package ex12;
+import java.util.Scanner;
+public class Ex12 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int num =0;
+       int maior = 0;
+       int menor = 1000000000;
+       int soma = 0;
+       double media = 0;
+       double loop = 0;
+       double pares = 0;
+       do{
+           
+           
+           num = ler.nextInt();
+           if (num <= 0) {
+               break;
+               
+           }
+           
+           if(num%2 == 0){
+               pares++;
+               if(num > maior){
+               maior = num;
+           }
+           }else{
+               if(num < menor){
+                   menor = num;
+               }
+           }
+           
+           soma = soma + num;
+           loop++;
+           media = soma/ (loop);
+           
+                      
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+          
+       }while(num > 0);
+            
+        double percent = (pares/loop)*100;
+        
+        
+        System.out.println("o maior valor par:" + maior);
+        System.out.println("o menor valor impar: " + menor);
+        System.out.println("Soma dos valores lidos: " + soma);
+        System.out.println("Media dos valores lidos: " + media);
+        System.out.println("Percentual de numeros pares: " + percent + "%");
+        
+        
+        
+    
+    }
+}
