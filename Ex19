@@ -1,0 +1,35 @@
+package ex19;
+import java.util.Scanner;
+public class Ex19 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int j = 0;
+       int num = 0;
+       int maior = 0;
+       int menor = 1000000000;
+       int media = 0;
+       int soma = 0;
+       do{
+          num = ler.nextInt();
+           if (num > maior) {
+               maior = num;
+           }
+           if ( num < menor ){
+               menor = num;
+           }
+           
+           soma = soma + num;
+           
+           
+           
+           
+       j++;    
+       }while(j < 500);
+       media = soma/j;
+        System.out.println("Maior numero: " + maior);
+        System.out.println("Menor numero: " + menor);
+        System.out.println("Media dos numeros lidos: " + media );
+       
+    }
+}
