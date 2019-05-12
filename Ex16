@@ -1,0 +1,31 @@
+package ex16;
+import java.util.Scanner;
+public class Ex16 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int idade = 0;
+       int loop = 0;
+       int media = 0;
+       int soma = 0;
+       do{
+           
+           idade = ler.nextInt();
+           if (idade < 0) {
+               break;
+           }
+           soma = soma + idade;
+           loop++;
+           
+           
+           
+           
+           
+           
+       }while(idade > 0);
+       
+       media = soma/loop;
+        System.out.println(media);
+       
+    }
+}
