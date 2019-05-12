@@ -1,0 +1,28 @@
+package ex20;
+import java.util.Scanner;
+public class Ex20 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       
+       double num = ler.nextDouble();
+       double s = 0;
+       
+       
+        for (double i = 1; i <= num; i++) {
+            s = s + 1/i;
+            System.out.println(1/i);
+            if (i == num) {
+                System.out.println("+");
+                System.out.println(1);
+                System.out.println(" = ");
+            }else{
+                System.out.println("+");
+            }
+            
+        }
+       s = s + 1;
+        System.out.println(s);
+        
+    }
+}
