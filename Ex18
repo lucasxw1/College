@@ -1,0 +1,29 @@
+package ex18;
+import java.util.Scanner;
+public class Ex18 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int j = 0;
+       int num = 0;
+       do{
+           System.out.println("\n");
+           System.out.println("Digite o numero");
+           num = ler.nextInt();
+           
+           for (int i = 1; i <= num; i++) {
+               System.out.println( i + " x " + num + " = " + (i * num));
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+       j++;    
+       }while(j < 20);
+       
+    }
+}
