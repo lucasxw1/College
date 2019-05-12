@@ -1,0 +1,67 @@
+package ex11;
+import java.util.Scanner;
+public class Ex11 {
+
+    public static void main(String[] args) {
+       Scanner ler = new Scanner(System.in);
+       int idade = 0;
+       double salario = 0;
+       double somaSalarioM = 0;
+       int sexo = 0;
+       int h = 0;
+       int m = 0;
+       double m2 = 0;
+       int maior = 0;
+       int menor = 1000000000;
+       do{
+           
+           System.out.println("Digite a idade: ");
+           idade = ler.nextInt();
+           if (idade < 0) {
+               break;
+           }
+           System.out.println("Informe o Sexo, digite 1 para homem e 2 para mulher: ");
+           sexo = ler.nextInt();
+           if (sexo == 1) {
+               h++;
+           }else{m++;}
+           
+           System.out.println("Informe o salario");
+           salario = ler.nextInt();
+           
+           if (sexo == 1) {
+               if (idade > maior) {
+                   maior = idade;
+               }
+               if(idade < menor){
+                   menor = idade;
+               }
+           }
+           
+           if (sexo == 2) {
+               somaSalarioM = somaSalarioM + salario;
+               if (salario < 2000) {
+                   m2++;
+               }
+           }
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+           
+       }while(idade > 0);
+        
+        double mediaM = somaSalarioM/m;
+        System.out.println("A media de salario das mulher é: " + mediaM );
+        System.out.println("A menor idade dos homens é: " + menor);
+        System.out.println("A maior idade dos homens é: " + maior);
+        System.out.println("A quantidade de mulheres com salario até 2000,00 reais é de: " + m2);
+    }
+}
