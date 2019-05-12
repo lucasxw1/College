@@ -1,6 +1,6 @@
-package ex11;
+package ex13;
 import java.util.Scanner;
-public class Ex11 {
+public class Ex13 {
 
     public static void main(String[] args) {
        Scanner ler = new Scanner(System.in);
