@@ -16,9 +16,10 @@ public class Got {
         double kgvv = 0;
         double kgdd = 0;
                 
+        int j = 0;
         int i = 0;
         
-        while(i < 365){
+        while(j < 365){
            kgr = (0.005*r); // raeghal
            kgrr = kgrr + kgr;  
            r = r + kgr;
@@ -33,15 +34,15 @@ public class Got {
            
            
         
-        i++;
+        j++;
         }       
         
-        System.out.println("Raeghal comeu "+kgrr + "kg de racao.");
-        System.out.println("Viserion comeu "+kgvv + "kg de racao.");
-        System.out.println("Drogon comeu " +kgdd + "kg de racao.");
+        System.out.println("Raeghal comeu "+kgrr + "kg de racao no primeiro ano.");
+        System.out.println("Viserion comeu "+kgvv + "kg de racao no primeiro ano.");
+        System.out.println("Drogon comeu " +kgdd + "kg de racao no primeiro ano.");
         double soma = (kgrr + kgvv + kgdd);
         
-        System.out.println("Todos juntos consumiram " + soma + "kg de racao.");
+        System.out.println("Todos juntos consumiram " + soma + " kg de racao.");
         long dolares = 1000000000* 2;
         
         while(i < 365){
@@ -63,7 +64,8 @@ public class Got {
         soma = (kgrr + kgvv + kgdd);
         double precoR = (soma/500)*30000;
         System.out.println("Verba em dolares: " + dolares);
-        System.out.println("Preco total das racoes " + precoR);
+        System.out.println("Preco total das racoes em 2 anos: " + precoR);
+        
         if (dolares >= precoR) {
             System.out.println("Verba suficiente");
         } else {
