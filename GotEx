@@ -43,7 +43,7 @@ public class Got {
         double soma = (kgrr + kgvv + kgdd);
         
         System.out.println("Todos juntos consumiram " + soma + " kg de racao.");
-        long dolares = 1000000000* 2;
+        long dolares = 1000000* 2;
         
         while(i < 365){
            kgr = (0.005*r); // raeghal
