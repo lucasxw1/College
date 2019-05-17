@@ -1,0 +1,79 @@
+/*
+ @author Lucas Garcia
+ */
+package got;
+
+public class Got {
+
+    public static void main(String[] args) {
+        double r = 25;
+        double v = (25*0.10) + 25;
+        double d = (v*0.20) + v;
+        double kgr = 0;
+        double kgv = 0;
+        double kgd = 0;
+        double kgrr = 0;
+        double kgvv = 0;
+        double kgdd = 0;
+                
+        int i = 0;
+        
+        while(i < 365){
+           kgr = (0.005*r); // raeghal
+           kgrr = kgrr + kgr;  
+           r = r + kgr;
+           
+           kgv = (0.005*v); // viserion
+           kgvv = kgvv + kgv;  
+           v = v + kgv;
+           
+           kgd = (0.005*d); // drogon
+           kgdd = kgdd + kgd;  
+           d = d + kgd;
+           
+           
+        
+        i++;
+        }       
+        
+        System.out.println("Raeghal comeu "+kgrr + "kg de racao.");
+        System.out.println("Viserion comeu "+kgvv + "kg de racao.");
+        System.out.println("Drogon comeu " +kgdd + "kg de racao.");
+        double soma = (kgrr + kgvv + kgdd);
+        
+        System.out.println("Todos juntos consumiram " + soma + "kg de racao.");
+        long dolares = 1000000000* 2;
+        
+        while(i < 365){
+           kgr = (0.005*r); // raeghal
+           kgrr = kgrr + kgr;  
+           r = r + kgr;
+           
+           kgv = (0.005*v); // viserion
+           kgvv = kgvv + kgv;  
+           v = v + kgv;
+           
+           kgd = (0.005*d); // drogon
+           kgdd = kgdd + kgd;  
+           d = d + kgd;
+           
+        i++;
+        }
+        
+        soma = (kgrr + kgvv + kgdd);
+        double precoR = (soma/500)*30000;
+        System.out.println("Verba em dolares: " + dolares);
+        System.out.println("Preco total das racoes " + precoR);
+        if (dolares >= precoR) {
+            System.out.println("Verba suficiente");
+        } else {
+            System.out.println("Verba insuficiente");
+        }
+       
+        
+        
+                
+        
+    }
+    
+}
