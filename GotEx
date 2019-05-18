@@ -1,75 +1,77 @@
 /*
- @author Lucas Garcia
+ @author Lucas Garcia 19111270-5  e 
  */
 package got;
 
 public class Got {
 
     public static void main(String[] args) {
-        double r = 25;
-        double v = (25*0.10) + 25;
-        double d = (v*0.20) + v;
-        double kgr = 0;
-        double kgv = 0;
-        double kgd = 0;
-        double kgrr = 0;
-        double kgvv = 0;
-        double kgdd = 0;
+        double r = 25; // peso de nascimento do raeghal
+        double v = (25*0.10) + 25; // peso de nascimento do viserion
+        double d = (v*0.20) + v; // peso de nascimento do drogon
+        double kgr = 0;  // kg de racao consumidos por dia do raeghal
+        double kgv = 0;  // kg de racao consumidos por dia do viserion
+        double kgd = 0;  // kg de racao consumidos por dia do drogon
+        double kgrr = 0; // kg de racao ao total consumidos em um ano do raeghal;
+        double kgvv = 0; // kg de racao ao total consumidos em um ano do viserion;
+        double kgdd = 0; // kg de racao ao total consumidos em um ano do drogon;
                 
         int j = 0;
         int i = 0;
         
-        while(j < 365){
-           kgr = (0.005*r); // raeghal
+        while(j < 365){ // primeiro ano
+           kgr = (0.005*r); 
            kgrr = kgrr + kgr;  
-           r = r + kgr;
+           r = r + kgr; // atualizacao do peso raeghal
            
-           kgv = (0.005*v); // viserion
+           kgv = (0.005*v); 
            kgvv = kgvv + kgv;  
-           v = v + kgv;
+           v = v + kgv; // atualizacao do peso viserion
            
-           kgd = (0.005*d); // drogon
+           kgd = (0.005*d);
            kgdd = kgdd + kgd;  
-           d = d + kgd;
+           d = d + kgd; // atualizacao do peso drogon
            
            
         
         j++;
         }       
-        
+        double soma = (kgrr + kgvv + kgdd); // kg total de racao consumida por todos os dragoes durante o primeiro ano
         System.out.println("Raeghal comeu "+kgrr + "kg de racao no primeiro ano.");
         System.out.println("Viserion comeu "+kgvv + "kg de racao no primeiro ano.");
         System.out.println("Drogon comeu " +kgdd + "kg de racao no primeiro ano.");
-        double soma = (kgrr + kgvv + kgdd);
+        System.out.println("Todos juntos consumiram " + soma + " kg de racao no primeiro ano.");
+        long draconaris = 1000000; // verba recebida
+        long dolares = draconaris* 2; // conversao para dolares
         
-        System.out.println("Todos juntos consumiram " + soma + " kg de racao.");
-        long dolares = 1000000* 2;
-        
-        while(i < 365){
-           kgr = (0.005*r); // raeghal
+        while(i < 365){ // segundo ano
+           kgr = (0.005*r); 
            kgrr = kgrr + kgr;  
-           r = r + kgr;
+           r = r + kgr; // atualizacao peso raeghal
            
-           kgv = (0.005*v); // viserion
+           kgv = (0.005*v); 
            kgvv = kgvv + kgv;  
-           v = v + kgv;
+           v = v + kgv; // atualizacao peso viserion
            
-           kgd = (0.005*d); // drogon
+           kgd = (0.005*d); 
            kgdd = kgdd + kgd;  
-           d = d + kgd;
+           d = d + kgd; // atualizacao peso drogon
            
         i++;
         }
         
-        soma = (kgrr + kgvv + kgdd);
-        double precoR = (soma/500)*30000;
+        soma = (kgrr + kgvv + kgdd); // kg total de racao consumida por todos os dragoes durante dois anos
+        double pacotes = soma/500; // quantidade total de pacotes de racao consumidas por todos os dragoes durante 2 anos
+        double precoR = pacotes*30000; // preco total em dolares da quantidade total de racao consumida em 2 anos
+        
         System.out.println("Verba em dolares: " + dolares);
         System.out.println("Preco total das racoes em 2 anos: " + precoR);
         
-        if (dolares >= precoR) {
-            System.out.println("Verba suficiente");
+        
+        if (dolares >= precoR) { // Condicional para saber se a verba foi suficiente para alimentar os dragoes durante dois anos
+            System.out.println("Verba suficiente para alimentar os dragoes em seus dois primeiros anos de vida");
         } else {
-            System.out.println("Verba insuficiente");
+            System.out.println("Verba insuficiente para alimentar os dragoes em seus dois primeiros anos de vida");
         }
        
         
