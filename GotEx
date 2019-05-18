@@ -1,20 +1,30 @@
 /*
  @author Lucas Garcia 19111270-5  e 
+
+
+Algoritmo - * Utilizamos um laco de repeticao para cada ano, em que a cada loop o dragao comia 0,5% do seu peso, o peso do dragao é atualizado e o loop continua até completar um ano;
+nos mesmo loops criamos uma variavel que somava a quantidade de racao que cada dragao comeu durante o ano e ao final do loop, se somava as quatidades que cada dragao comeu para conseguir
+a quantidade de racao total consumida pelos dragoes;
+*Algoritmo de conversao simples para passar de draconaris para dolares, sabendo que cada draconaris equivale a 2 dolares, draconaris * 2 = dolares;
+Fazendo a quantidade total de racao consumidas por todos os dragoes e dividindo pela quantidade de kg de racao que vem em cada pacote, conseguiamos o numero de pacotes de racao necessarios;
+Cada pacote de racao custa 30000, logo numero de pacotes * 30000
+Para finalizar uma condicional para saber se a verba cobria a quantidade de racao consumida por todos os dragoes no final de dois anos;
+
  */
 package got;
 
 public class Got {
 
     public static void main(String[] args) {
-        double r = 25; // peso de nascimento do raeghal
-        double v = (25*0.10) + 25; // peso de nascimento do viserion
-        double d = (v*0.20) + v; // peso de nascimento do drogon
+        double r = 25; // raeghal
+        double v = (25*0.10) + 25; // viserion
+        double d = (v*0.20) + v; // drogon
         double kgr = 0;  // kg de racao consumidos por dia do raeghal
         double kgv = 0;  // kg de racao consumidos por dia do viserion
         double kgd = 0;  // kg de racao consumidos por dia do drogon
         double kgrr = 0; // kg de racao ao total consumidos em um ano do raeghal;
-        double kgvv = 0; // kg de racao ao total consumidos em um ano do viserion;
-        double kgdd = 0; // kg de racao ao total consumidos em um ano do drogon;
+        double kgvv = 0; // kg de racao ao total consumidos em um ano do raeghal;
+        double kgdd = 0; // kg de racao ao total consumidos em um ano do raeghal;
                 
         int j = 0;
         int i = 0;
