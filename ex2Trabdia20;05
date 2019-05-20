@@ -1,0 +1,52 @@
+package javaapplication2;
+
+import java.util.Scanner;
+
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        int i = 0;
+        int num = 0;
+        int abundante = 0;
+        int defectivo = 0;
+        int perfeito = 0;
+        Scanner teclado = new Scanner(System.in);
+        do {
+            num = teclado.nextInt();
+            if (somaDivisoresProprios(num) == num) {
+                perfeito++;
+            }
+            if (somaDivisoresProprios(num) < num) {
+                defectivo++;
+            }
+            if (somaDivisoresProprios(num) > num) {
+                abundante++;
+            }
+
+            i++;
+        } while (i < 3);
+
+        double percentAbun = (abundante * 100) / i;
+        double percentDefec = (defectivo * 100) / i;
+        double percentPerfect = (perfeito * 100) / i;
+        System.out.println("abundante ____" + percentAbun);
+        System.out.println("defeituoso ____" + percentDefec);
+        System.out.println("perfeito ____ " + percentPerfect);
+
+    }
+
+    public static int somaDivisoresProprios(int n) {
+        int soma = 0;
+        for (int i = 1; i < n; i++) {
+            if (n % i == 0) {
+                soma += i;
+            }
+        }
+        return soma;
+    }
+
+    public static boolean ehPerfeito(int n) {
+        return n == somaDivisoresProprios(n);
+    }
+
+}
