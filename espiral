@@ -1,0 +1,18 @@
+def coordenadas(a, r):
+  a = math.radians(a)
+  x = r * math.cos(a) 
+  y = r * math.sin(a)
+  return x, y 
+
+r = int(input("digite o raio"))
+listx = []
+listy = []
+for i in range(0,4*360):
+  
+  x , y = coordenadas(i, r)
+  listx.append(x)
+  listy.append(y)
+  r = r+3
+
+plt.plot(listx, listy)
+plt.savefig("lala.svg")  
