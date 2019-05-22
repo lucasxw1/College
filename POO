@@ -1,0 +1,63 @@
+package javaapplication2;
+import java.util.Scanner;
+public class JavaApplication2 {
+
+    public static void main(String[] args) {
+        int matricula = 0;
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Digite o nome");
+        String nome = teclado.nextLine();
+        do{
+        System.out.println("Digite a matricula");
+        matricula = teclado.nextInt();
+        } while(matricula < 100 );
+        Aluno aluno = new Aluno();
+        
+        aluno.setNome(nome);
+        aluno.setMatricula(matricula);
+        System.out.println("aluno :  " + aluno.getNome() + " matricula : " + aluno.getMatricula());
+        
+
+}
+}
+
+
+
+
+
+
+
+
+
+package javaapplication2;
+
+/**
+ *
+ * @author 19111270
+ */
+public class Aluno {
+    private String nome;
+    private int matricula;
+ public Aluno(){
+     
+ }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
+    }
+    
+    
+}
+
