@@ -1,0 +1,6 @@
+public boolean amigos(int n, int k){
+            if (somaDivisoresProprios(n) == k && somaDivisoresProprios(k) == n) {
+                return true;
+            }else{
+                        return false;
+                        }
