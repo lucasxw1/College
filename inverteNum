@@ -1,0 +1,21 @@
+public int inverteNum(int num){
+        
+        String a;
+        String b;
+        String c;
+        String d;
+        String e;
+        String palavra = Integer.toString(num);
+        
+        
+        
+        a = palavra.substring(0, 1);
+        b = palavra.substring(1,2);
+        c = palavra.substring(2,3);
+        d = palavra.substring(3,4);
+        e = palavra.substring(4,5);
+        String k = (e+d+c+b+a); 
+        int q = Integer.valueOf(k);
+        return q;
+        }
+   
