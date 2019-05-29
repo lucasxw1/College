@@ -1,0 +1,74 @@
+package banco;
+public class ContaBancaria
+{
+ private String nomeTitular;
+private String numConta;
+private double saldo;
+
+  public ContaBancaria(String nomeTitular, String numConta){
+ this.nomeTitular = nomeTitular;
+ this.numConta = numConta;
+ this.saldo = 0;
+ }
+
+ public String getNomeTitular(){
+return nomeTitular;
+ }
+
+ public String getNumConta(){
+return numConta;
+ }
+
+ public double getSaldo(){
+return saldo;
+ }
+
+ public void setNomeTitular(String nomeTitular){
+ this.nomeTitular = nomeTitular;
+ }
+
+ public void setNumConta(String numConta){
+ this.numConta = numConta;
+ }
+
+ public void setSaldo(double saldo){
+ this.saldo = saldo;
+ }
+
+ public void sacar(double valor){
+ this.saldo = this.saldo - valor;
+ 
+ }
+
+ public void depositar(double valor){
+ this.saldo = this.saldo + valor;
+ } 
+
+ public void transferir(ContaBancaria contaOrigem, double valor){
+ this.saldo = this.saldo - valor;
+ contaOrigem.setSaldo(contaOrigem.getSaldo()+valor);  
+ 
+ }
+
+ public String contaCedulas(int valor){
+ int notas100 = 0;
+ if(valor%100==0){notas100++;}
+ int notas50 = 0;
+ if(valor%50 == 0){notas50++;}
+ int notas20 = 0;
+ if(valor%20 == 0){notas20++;}
+ int notas5 = 0;
+ if(valor%5 == 0){notas5++;}
+ int notas1 = 0;
+ if(valor%1 == 0){notas1++;}
+
+ return "Notas de 100: " + notas100 + "\nNotas de 50: " + notas50 + "\nNotas de 20: " +
+notas20 + "\nNotas de 5: " + notas5 + "\nNotas de 1: " + notas1;
+ }
+
+    
+    public String toString() {
+        return "ContaBancaria{" + "nomeTitular=" + nomeTitular + ", numConta=" + numConta + ", saldo=" + saldo + '}';
+    }
+
+}
