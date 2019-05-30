@@ -1,0 +1,120 @@
+import matplotlib.pyplot as plt
+import math
+import random
+nivel = int(input("Digite o nivel do jogo, entre 1, 2 e 3: "))
+
+
+if nivel == 1: 
+    alvox = []
+    alvoy = []
+    alvokx = []
+    alvoky = []
+    
+    alvox.append(random.randint(-1000, 1000))
+    alvoy.append(random.randint(-1000, 1000))
+    
+    plt.ylim(-1000,1000)
+    plt.xlim(-1000,1000)
+    for i in range(0,10):
+        x = int(input("Informe a coordenada x que deseja tentar: "))
+        y = int(input("Informe a coordenada y que deseja tentar: "))
+        
+        plt.plot(x,y,"bo")
+        
+        alvoxx = int(alvox[0])
+        alvoyy = int(alvoy[0])
+        plt.ylim(-1000,1000)
+        plt.xlim(-1000,1000)
+        plt.plot(alvox,alvoy, "ro")
+        
+        plt.show()
+        
+        distancia = math.sqrt((((x-alvoxx)**2)+((y-alvoyy)**2)))
+        
+        print("Distância: ", distancia)
+        
+        if round(distancia) < 100:
+            print("Voce acertou")
+            break
+        i = i +1
+        alvokx.append(x)
+        alvoky.append(y)
+        plt.plot(alvokx,alvoky, "yo")
+        
+if nivel == 2:
+    alvox = []
+    alvoy = []
+    alvokx = []
+    alvoky = []
+    
+    alvox.append(random.randint(-1000, 1000))
+    alvoy.append(random.randint(-1000, 1000))
+    
+    plt.ylim(-1000,1000)
+    plt.xlim(-1000,1000)
+    
+    for i in range(0,10):
+        x = int(input("Informe a coordenada x que deseja tentar: "))
+        y = int(input("Informe a coordenada y que deseja tentar: "))
+        
+        plt.plot(x,y,"bo")
+        
+        alvoxx = int(alvox[0])
+        alvoyy = int(alvoy[0])
+        plt.ylim(-1000,1000)
+        plt.xlim(-1000,1000)
+        
+        
+        plt.show()
+        
+        distancia = math.sqrt((((x-alvoxx)**2)+((y-alvoyy)**2)))
+        
+        print("Distância: ", distancia)
+        
+        if round(distancia) < 50:
+            print("Voce acertou")
+            break
+        i = i +1
+        alvokx.append(x)
+        alvoky.append(y)
+        plt.plot(alvokx,alvoky, "yo")
+        
+if nivel == 3:
+    alvox = []
+    alvoy = []
+    alvokx = []
+    alvoky = []
+    
+    alvox.append(random.randint(-1000, 1000))
+    alvoy.append(random.randint(-1000, 1000))
+    
+    plt.ylim(-1000,1000)
+    plt.xlim(-1000,1000)
+    
+    
+    for i in range(0,10):
+        x = int(input("Informe a coordenada x que deseja tentar: "))
+        y = int(input("Informe a coordenada y que deseja tentar: "))
+        plt.axis("off")
+        
+        plt.plot(x,y,"bo")
+        
+        alvoxx = int(alvox[0])
+        alvoyy = int(alvoy[0])
+        plt.ylim(-1000,1000)
+        plt.xlim(-1000,1000)
+        
+        
+        plt.show()
+        
+        distancia = math.sqrt((((x-alvoxx)**2)+((y-alvoyy)**2)))
+        
+        print("Distância: ", distancia)
+        
+        if round(distancia) < 10:
+            print("Voce acertou")
+            break
+        i = i +1
+        alvokx.append(x)
+        alvoky.append(y)
+        plt.plot(alvokx,alvoky, "yo")            
