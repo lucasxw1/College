@@ -1,0 +1,173 @@
+//author@ Lucas Garcia 19111270, Ciencia da computacao, prof Lucia Giraffa;
+package bicharia1;
+import java.util.Scanner;
+public class Bicharia1 {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Digite o tamanho do colar, 1 para 50cm e 2 para 70cm");
+        int cm = in.nextInt();
+        System.out.println("Digite a onde quer pendurar o colar, 1 para Gancho 2 para Caixa Redonda");
+        int p = in.nextInt();
+        Colar c1 = new Colar(cm,p);
+        while(true){
+            int la = menu();
+            if(la == 0){ 
+                break;
+            }
+            switch(la){
+                case 1:
+                    c1.compraPingentePrata();
+                    break;
+                case 2:
+                    c1.compraPingentePrata2();
+                    break;
+                case 3:
+                    System.out.println(c1.getPreco());
+                    break;
+            }
+                    
+        }
+        System.out.println("Orcamento: " + c1.getPreco());
+        System.out.println("Deseja pagar em quantas vezes?");
+        int prestacao = in.nextInt();
+        c1.setPrestacao(prestacao);
+        System.out.println("Orcamento final baseado nas prestacoes: " + c1.precoFinal);
+        if (prestacao<0) {
+             System.out.println("Valor de cada parcela: " + c1.precoFinal/prestacao);
+        }else{
+        System.out.println("Valor de cada parcela: " + c1.precoFinal);
+                }
+        
+        
+    
+    
+    
+    
+    
+    
+    }
+
+public static int menu(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Menu de compra");
+        System.out.println("(0)para finalizar a compra");
+        System.out.println("(1)para comprar um pingente prata");
+        System.out.println("(2)para comprar um pingente prata com com predras incrustradas");
+        System.out.println("(3)Verificar quanto esta ao total seu colar");
+        int op = in.nextInt();
+        return op;
+
+ }      
+    
+}
+
+
+
+package bicharia1;
+
+
+public class Colar {
+    int colarcm = 0;
+    int pendurado = 0;
+    int prestacao = 0;
+    int preco = 0;
+    int precoFinal = 0;
+    public Colar(int colarcm,int pendurado){
+        this.colarcm = colarcm;
+        this.pendurado = pendurado;
+        if (colarcm == 1){
+            this.preco = this.preco + 300;
+        }
+        if ( colarcm == 2){
+            this.preco = this.preco + 400;
+        }
+        if ( pendurado == 1){
+            this.preco = this.preco + 200;
+        }
+        if (pendurado ==2) {
+            this.preco = this.preco + 350;
+        }
+        
+        
+    }
+
+    public int getPreco() {
+        
+        return this.preco;
+    }
+
+    public void setPreco(int preco) {
+        this.preco = preco;
+    }
+
+    public int getPrecoFinal() {
+        return precoFinal;
+    }
+
+    public void setPrecoFinal(int precoFinal) {
+        this.precoFinal = precoFinal;
+    }
+    
+
+    public int getColarcm() {
+        return colarcm;
+    }
+
+    public void setColarcm(int colarcm) {
+        this.colarcm = colarcm;
+    }
+
+    public int getPendurado() {
+        return pendurado;
+    }
+
+    public void setPendurado(int pendurado) {
+        this.pendurado = pendurado;
+    }
+
+    public int getPrestacao() {
+        return prestacao;
+    }
+
+    public void setPrestacao(int prestacao) {
+        this.prestacao = prestacao;
+        if (prestacao == 0) {
+            this.precoFinal = this.preco - ((5*this.preco)/100);
+        }
+        if (prestacao > 0 && prestacao <= 3 ) {
+            this.precoFinal = this.preco;
+        }
+        if (prestacao > 3) {
+            this.precoFinal = this.preco + ((this.preco*10)/100);
+        }
+    }
+    
+    public void compraPingentePrata(){
+        this.preco = this.preco + 70;
+    }
+    
+     public void compraPingentePrata2(){
+        this.preco = this.preco + 100;
+    }
+    
+     public int valorPrestacao(){
+       
+        if (prestacao > 0 && prestacao <= 3 ) {
+            return precoFinal/prestacao;
+        }
+        if (prestacao > 3) {
+            return precoFinal/prestacao;
+        }else{
+       return precoFinal;
+     }
+    
+}
+}
+
+
+
+
+
+
+
