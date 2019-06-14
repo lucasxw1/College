@@ -1,0 +1,15 @@
+text = "LALALA"
+crib = "LA"
+acontece = False
+contador = 0
+for i in range(len(text)-len(crib)+1):
+  if acontece == True:
+    contador = contador +1
+  for v in range(len(crib)):
+    acontece = True
+    if  crib[v] == text[v+i]:
+      acontece = False
+      break;
+
+
+print(contador)
